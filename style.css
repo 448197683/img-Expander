@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  width: 90vw;
+  flex-direction: row;
+  border: 1px solid black;
+}
+.panel {
+  height: 80vh;
+  flex: 1;
+  background-repeat: no-repeat; /* 不重复 */
+  background-size: cover; /* 填满 */
+  background-position: center;
+  margin: 10px;
+  border-radius: 30px;
+  transition: flex 0.45s ease-in-out; /* 转变 */
+}
+.panel:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+  cursor: pointer;
+}
+.panel1 {
+  background-image: url(./img/img1.jpg);
+}
+.panel2 {
+  background-image: url(./img/img2.jpg);
+}
+.panel3 {
+  background-image: url(./img/img3.jpg);
+}
+.panel4 {
+  background-image: url(./img/img4.jpg);
+}
+.panel5 {
+  background-image: url(./img/img5.jpg);
+}
+.expand {
+  flex: 3;
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+}
